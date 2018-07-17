@@ -23,6 +23,11 @@
 #                   ▒▒▒▒▒▒▒▒▒▒▀▀
 #
 
+if [[ $EUID -ne 0 ]]; then
+   echo "cool story bro, now try 'sudo !!'" 
+   exit 1
+fi
+
 for ip in "$@"
 do
 echo '[elevator music plays softly]'
