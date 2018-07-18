@@ -34,9 +34,9 @@ echo Checking for html2text: $PKG_OK
 
 if [ "" == "$PKG_OK" ]; then
   echo "HTML2Text not installed. Installing..."
-  sudo apt-get --force-yes --yes install html2text
+  apt install html2text --yes
 fi
-# End dependency check.
+# End dependency check. Script should be run as root/sudo so sudo not required for apt.
 
 for ip in "$@"
 do
