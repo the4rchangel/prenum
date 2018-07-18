@@ -30,7 +30,7 @@ fi
 
 # Check for and install HTML2Text if not installed
 PKG_OK=$(dpkg-query -W --showformat='${Status}\n' html2text|grep "install ok installed")
-echo Checking for html2text: $PKG_OK
+echo Checking for html2text package.
 
 if [ "" == "$PKG_OK" ]; then
   echo "HTML2Text not installed. Installing..."
